@@ -21,5 +21,8 @@
         "printWidth": 140,
         "tabWidth": 4,
         "singleQuote": true
+    },
+    "dependencies": {
+        "vue3-timepicker": "^1.0.0-beta.2"
     }
 }

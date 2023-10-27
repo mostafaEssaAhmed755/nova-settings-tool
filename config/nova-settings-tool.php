@@ -92,6 +92,12 @@ return [
             'label' => 'Timeout (min.)',
         ],
 
+        [
+            'key' => 'time_key',
+            'type' => 'Time',
+            'label' => 'Time Label',
+            'format' => 'HH:mm',
+        ],
     ],
 
 ];

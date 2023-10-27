@@ -3,7 +3,7 @@
         <Head :title="title" />
         <template v-for="(keys, panel) in panels">
             <Heading class="mb-6">{{ __(panelName(panel)) }}</Heading>
-            <Card class="overflow-hidden mb-8">
+            <Card class="mb-8">
                 <Component
                     v-for="(setting, index) in keys"
                     :index="index"
@@ -30,6 +30,7 @@ import SelectSetting from './SelectSetting.vue';
 import TextSetting from './TextSetting.vue';
 import TextareaSetting from './TextareaSetting.vue';
 import ToggleSetting from './ToggleSetting.vue';
+import TimeSetting from './TimeSetting.vue';
 
 export default {
     components: {
@@ -39,6 +40,7 @@ export default {
         TextSetting,
         TextareaSetting,
         ToggleSetting,
+        TimeSetting,
     },
     data: () => ({
         saving: false,
