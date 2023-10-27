@@ -73,6 +73,7 @@ There are currently six available setting types:
 -   `number`: Number input
 -   `select`: Single-select dropdown
 -   `time`: time input using TimePicker pkg
+
     All strings in this package, and any you pass to it, can easily be translated using [Laravel’s built-in localization features](https://laravel.com/docs/localization#using-translation-strings-as-keys).
 
 This tool also fires an event any time any settings are changed, with all the old and new settings attached.
