@@ -1,5 +1,4 @@
-Laravel Nova tool to manage app settings
-========================================
+# Laravel Nova tool to manage app settings
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/bakerkretzmar/nova-settings-tool.svg?style=flat)](https://packagist.org/packages/bakerkretzmar/nova-settings-tool)
 [![Total Downloads](https://img.shields.io/packagist/dt/bakerkretzmar/nova-settings-tool.svg?style=flat)](https://packagist.org/packages/bakerkretzmar/nova-settings-tool)
@@ -12,10 +11,22 @@ Store and edit simple app-wide settings right in Nova. Settings are stored as JS
 
 ## Installation
 
+add to `composer.json` file
+
+```bash
+"repositories": {
+    //....
+    {
+        "type": "vcs",
+        "url": "https://github.com/mostafaEssaAhmed755/nova-settings-tool.git"
+    }
+}
+```
+
 Install the package via Composer in any Laravel app using [Nova](https://nova.laravel.com):
 
 ```bash
-composer require bakerkretzmar/nova-settings-tool
+composer require mdark/nova-settings-tool
 ```
 
 > Nova Settings Tool v2 requires Nova 4—for older versions of Nova, use v1 of this package.
@@ -55,12 +66,12 @@ The settings’ actual values are stored as JSON at the location specified in th
 
 There are currently six available setting types:
 
-- `text`: Single-line text input
-- `textarea`: Multi-line text input
-- `toggle`: Boolean switch
-- `code`: [CodeMirror](https://codemirror.net/) text editor
-- `number`: Number input
-- `select`: Single-select dropdown
+-   `text`: Single-line text input
+-   `textarea`: Multi-line text input
+-   `toggle`: Boolean switch
+-   `code`: [CodeMirror](https://codemirror.net/) text editor
+-   `number`: Number input
+-   `select`: Single-select dropdown
 
 All strings in this package, and any you pass to it, can easily be translated using [Laravel’s built-in localization features](https://laravel.com/docs/localization#using-translation-strings-as-keys).
 
@@ -70,10 +81,10 @@ This tool also fires an event any time any settings are changed, with all the ol
 
 The following features are planned or in development:
 
-- `color` setting type
-- `date` setting type
-- `file` setting type
-- setting validation
+-   `color` setting type
+-   `date` setting type
+-   `file` setting type
+-   setting validation
 
 ---
 
