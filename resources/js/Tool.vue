@@ -15,9 +15,9 @@
             </Card>
         </template>
         <div class="flex">
-            <LoadingButton class="ml-auto" @click="saveSettings" :processing="saving">
+            <button class="border inline-flex items-center justify-center appearance-none cursor-pointer rounded text-sm font-bold focus:outline-none focus:ring ring-primary-200 dark:ring-gray-600 relative disabled:cursor-not-allowed shadow h-9 px-3 bg-primary-500 border-primary-500 hover:enabled:bg-primary-400 hover:enabled:border-primary-400 text-white dark:text-gray-900 ml-auto" @click="saveSettings" :processing="saving">
                 {{ __('Save') }}
-            </LoadingButton>
+            </button>
         </div>
     </div>
 </template>
