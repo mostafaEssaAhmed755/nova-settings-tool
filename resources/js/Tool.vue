@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="nova-settings-tool">
         <Head :title="title" />
         <template v-for="(keys, panel) in panels">
-            <Heading class="mb-6">{{ __(panelName(panel)) }}</Heading>
+            <Heading class="mb-6 title">{{ __(panelName(panel)) }}</Heading>
             <Card class="mb-8">
                 <Component
                     v-for="(setting, index) in keys"
@@ -11,11 +11,16 @@
                     :is="`${settings[setting].type}Setting`"
                     :setting="settings[setting]"
                     @update="updateSetting"
+                    class="input-style"
                 />
             </Card>
         </template>
         <div class="flex">
-            <button class="border inline-flex items-center justify-center appearance-none cursor-pointer rounded text-sm font-bold focus:outline-none focus:ring ring-primary-200 dark:ring-gray-600 relative disabled:cursor-not-allowed shadow h-9 px-3 bg-primary-500 border-primary-500 hover:enabled:bg-primary-400 hover:enabled:border-primary-400 text-white dark:text-gray-900 ml-auto" @click="saveSettings" :processing="saving">
+            <button
+                class="save-button border inline-flex items-center justify-center appearance-none cursor-pointer rounded text-sm font-bold focus:outline-none focus:ring ring-primary-200 dark:ring-gray-600 relative disabled:cursor-not-allowed shadow h-9 px-3 bg-primary-500 border-primary-500 hover:enabled:bg-primary-400 hover:enabled:border-primary-400 text-white dark:text-gray-900 ml-auto"
+                @click="saveSettings"
+                :processing="saving"
+            >
                 {{ __('Save') }}
             </button>
         </div>
